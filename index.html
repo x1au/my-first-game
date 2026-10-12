@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My First Game</title>
+  <style>
+    body {
+      background: #101827;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 70px 15px;
+    }
+    button {
+      font-size: 70px;
+      background: #283b56;
+      border: 0;
+      border-radius: 25px;
+      padding: 25px;
+      cursor: pointer;
+    }
+    button:active {
+      transform: scale(0.93);
+    }
+  </style>
+</head>
+<body>
+  <h1>💰 My First Game</h1>
+  <h2>Coins: <span id="score">0</span></h2>
+  <button onclick="earn()">🪙</button>
+  <p>Click the coin to earn points!</p>
+
+  <script>
+    let score = 0;
+    function earn() {
+      score++;
+      document.getElementById("score").textContent = score;
+    }
+  </script>
+</body>
+</html>
